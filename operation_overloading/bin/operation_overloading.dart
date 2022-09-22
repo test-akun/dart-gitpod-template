@@ -1,9 +1,10 @@
 // import 'package:operation_overloading/use_case/person/person.dart';
+import 'package:operation_overloading/future_or_demo.dart';
 import 'package:operation_overloading/use_case/hero/hero.dart';
 import 'package:operation_overloading/use_case/utilities_consumption/consumption.dart';
 import 'package:operation_overloading/use_case/utilities_consumption/meter_reading.dart';
 
-void main(List<String> arguments) {
+Future<void> main(List<String> arguments) async {
   // print('Hello world!');
 
   // var p1 = Person('Bob', 'Smith');
@@ -27,4 +28,11 @@ void main(List<String> arguments) {
 
   print((a + 'dada').power);
   print(b > a);
+
+  User user = User();
+  UserManager userManagerFirebase = UserManager(FirebaseStorage());
+  UserManager userManagerLocal = UserManager(LocalStorage());
+
+  print(await userManagerFirebase.getUserAge(user));
+  print(await userManagerLocal.getUserAge(user));
 }
