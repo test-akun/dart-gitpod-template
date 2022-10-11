@@ -19,22 +19,22 @@ import 'package:equatable/equatable.dart';
 // void main() {
 //   var employee = Employee.fromJson({});
 //   print(employee);
-  // Prints:
-  // in Person
-  // in Employee
-  // Instance of 'Employee'
-  // print(UserAuthExc.invalidPassword.code);
-  
+// Prints:
+// in Person
+// in Employee
+// Instance of 'Employee'
+// print(UserAuthExc.invalidPassword.code);
+
 //   var p = Student();
 //   print(p.name);
-  
+
 //   const u = UserModel();
 //   print(u.name);
 // }
 
 // class Person {
 //   String name;
-  
+
 //   Person({this.name = 'no name'}){
 //     print('constructor person');
 //   }
@@ -49,14 +49,14 @@ import 'package:equatable/equatable.dart';
 // enum UserAuthExc {
 //   invalidPassword(100, 'wrong password'),
 //   invalidUserName(200, 'Username is not exist');
-  
+
 //   final int code;
 //   final String desc;
-  
+
 //   const UserAuthExc(this.code, this.desc);
-  
+
 //   double get excCodeInDouble => code.toDouble();
-  
+
 //   @override
 //   String toString() => '$name is one of exception';
 // }
@@ -64,12 +64,8 @@ import 'package:equatable/equatable.dart';
 // extension UserAuthExcExten on UserAuthExc {
 //   String get description {
 //     if (name == 'invalidPasswor')
-//   } 
+//   }
 // }
-
-
-
-
 
 // @immutable
 class UserEntity extends Equatable {
@@ -109,25 +105,25 @@ class UserEntity extends Equatable {
 
   @override
   List<Object?> get props => [
-    uid,
-    username,
-    name,
-    bio,
-    website,
-    email,
-    profileUrl,
-    followers,
-    following,
-    totalFollowers,
-    totalFollowing,
-    password,
-    otherUid,
-    totalPosts,
-  ];
+        uid,
+        username,
+        name,
+        bio,
+        website,
+        email,
+        profileUrl,
+        followers,
+        following,
+        totalFollowers,
+        totalFollowing,
+        password,
+        otherUid,
+        totalPosts,
+      ];
 }
 
 class UserModel extends UserEntity {
-   const UserModel(
+  const UserModel({
     super.uid,
     super.username,
     super.name,
@@ -140,5 +136,5 @@ class UserModel extends UserEntity {
     super.totalFollowers,
     super.totalFollowing,
     super.totalPosts,
-  );
+  });
 }
