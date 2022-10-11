@@ -1,12 +1,12 @@
 image:
   file: .gitpod.Dockerfile
 tasks:
+  # - name: upgrade dart
+  #   init: |
+  #     brew update
+  #     brew upgrade dart
+
   - command: dart Hello.dart
-    
-  - name: upgrade dart
-    command: |
-      brew update
-      brew upgrade dart
 
   - name: Get packages
     command: |
