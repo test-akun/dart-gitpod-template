@@ -2,6 +2,17 @@ image:
   file: .gitpod.Dockerfile
 tasks:
   - command: dart Hello.dart
+    
+  - name: upgrade dart
+    command: |
+      brew update
+      brew upgrade dart
+
+  - name: Get packages
+    command: |
+      cd solid_principles/
+      dart pub get
+
 vscode:
   extensions:
     - dart-code.dart-code

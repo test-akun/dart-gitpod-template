@@ -1,3 +1,5 @@
+import 'package:solid_principles/super_constructor.dart';
+
 void main(List<String> arguments) {
   
   
@@ -63,4 +65,6 @@ void main(List<String> arguments) {
   ///      punya kontrak untuk ngesave data user..
   ///      Dia tidak peduli data user siapa yang ngasih, siapa yang manggil..
   ///      Yang dia tau dia harus bisa save user ke database yang dituju.. 
+  /// 
+  const u = UserModel();
 }

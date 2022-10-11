@@ -25,6 +25,7 @@ class UserManager {
 ///
 abstract class IDataStorage {
   void saveUser(User user);
+  void getUser();
 }
 
 /// LOW LEVEL MODULE
@@ -37,6 +38,11 @@ class FirebaseStorage implements IDataStorage {
     // connect to firebase
     // save data
   }
+
+  @override
+  void getUser() {
+    // TODO: implement getUser
+  }
 }
 
 class LocalStorage implements IDataStorage {
@@ -45,5 +51,9 @@ class LocalStorage implements IDataStorage {
     // connect to local storage
     // save user
   }
-  
+
+  @override
+  void getUser() {
+    // TODO: implement getUser
+  }
 }
